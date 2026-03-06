@@ -2,17 +2,17 @@
 
 # ***Cheers: Decoupling Patch Details from Semantic Representations Enables Unified Multimodal Comprehension and Generation*** 
 
-Yichen Zhang<sup>1</sup>, Da Peng<sup>2</sup>, [Zonghao Guo](https://https://guozonghao96.github.io/)<sup>1</sup>, zijian zhang<sup>3</sup>,  Xuesong Yang<sup>3</sup>, 
+Yichen Zhang<sup>1</sup>, Da Peng<sup>2</sup>, [Zonghao Guo](https://https://guozonghao96.github.io/)<sup>1</sup>, Zijian Zhang<sup>3</sup>, Xuesong Yang<sup>3</sup>,
 
-Tong sun<sup>3</sup>, Shichu Sun<sup>3</sup>, Yidan Zhang<sup>3</sup>, Yanghao Li<sup></sup>, Haiyan Zhao<sup></sup>, Wang Xu<sup></sup>, 
+Tong Sun<sup>3</sup>, Shichu Sun<sup>3</sup>, Yidan Zhang<sup>3</sup>, Yanghao Li<sup></sup>, Haiyan Zhao<sup></sup>, Wang Xu<sup></sup>,
 
-Qi Shi<sup>1</sup>, Yangang Sun<sup>1</sup>, Chi Chen<sup>1</sup>, Shuo Wang<sup>1</sup>, Yukun Yan<sup></sup>, Xu Han<sup>1</sup>, 
+Qi Shi<sup>1</sup>, Yangang Sun<sup>1</sup>, Chi Chen<sup>1</sup>, Shuo Wang<sup>1</sup>, Yukun Yan<sup></sup>, Xu Han<sup>1</sup>,
 
-Qiang Ma<sup>1</sup>, Wei ke<sup>2</sup>, Liang Wang<sup>3</sup>, Zhiyuan Liu<sup>1</sup>, Maosong Sun<sup>1</sup>, 
+Qiang Ma<sup>1</sup>, [Wei Ke](https://scholar.google.com/citations?hl=en&user=BENt-uEAAAAJ)<sup>2</sup>, Liang Wang<sup>3</sup>, Zhiyuan Liu<sup>1</sup>, Maosong Sun<sup>1</sup>
 
-<sup>1</sup> Tsinghua University
-<sup>2</sup> Xi'an Jiaotong University, 
-<sup>3</sup> University of Chinese Academy of Sciences, 
+<sup>1</sup>Tsinghua University, 
+<sup>2</sup>Xi'an Jiaotong University, 
+<sup>3</sup>University of Chinese Academy of Sciences
 
 </div>
 
