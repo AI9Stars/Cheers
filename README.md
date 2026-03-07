@@ -1,8 +1,8 @@
 <div align="center">
 
-# ***Cheers: Decoupling Patch Details from Semantic Representations Enables Unified Multimodal Comprehension and Generation*** 
+# ***Cheers <img src="fig/logo.png" width="25"> : Decoupling Patch Details from Semantic Representations Enables Unified Multimodal Comprehension and Generation*** 
 
-Yichen Zhang<sup>1</sup>, Da Peng<sup>2</sup>, [Zonghao Guo](https://https://guozonghao96.github.io/)<sup>1</sup>, Zijian Zhang<sup>3</sup>, Xuesong Yang<sup>3</sup>,
+Yichen Zhang<sup>1</sup>, [Da Peng](https://pengda02.github.io/)<sup>2</sup>, [Zonghao Guo](https://guozonghao96.github.io/)<sup>1</sup>, Zijian Zhang<sup>3</sup>, Xuesong Yang<sup>3</sup>,
 
 Tong Sun<sup>3</sup>, Shichu Sun<sup>3</sup>, Yidan Zhang<sup>3</sup>, Yanghao Li<sup></sup>, Haiyan Zhao<sup></sup>, Wang Xu<sup></sup>,
 
@@ -15,6 +15,7 @@ Qiang Ma<sup>1</sup>, [Wei Ke](https://scholar.google.com/citations?hl=en&user=B
 <sup>3</sup>University of Chinese Academy of Sciences
 
 </div>
+<img src="fig/case.png" width="100%">
 
 
 ## 🌟 What is ***Cheers***?
@@ -29,6 +30,10 @@ A recent cutting-edge topic in multimodal modeling is to unify visual comprehens
 ```bash
 conda create -n cheers python=3.10 -y
 conda activate cheers
+pip install -r requirements.txt
+
+# optional
+pip install flash-attn --no-build-isolation
 ```
 
 
@@ -36,6 +41,7 @@ conda activate cheers
 ## 🧩 To-Do List
 
 - [ ] Release the **Inference Scripts** and **Checkpoints**
+- [ ] Release the **Evaluation Scripts**
 - [ ] Release the **Training Scripts** using the VeOmni framework
 - [ ] Release the **Training Data Recipe** 
 

@@ -1,0 +1,9 @@
+torch>=2.0.0
+torchvision
+transformers>=4.40.0
+Pillow
+param
+scipy
+black
+einops
+matplotlib
