@@ -36,10 +36,59 @@ pip install -r requirements.txt
 pip install flash-attn --no-build-isolation
 ```
 
+## Inference
+```bash
+import os
+import torch
+from transformers import AutoModelForCausalLM, AutoProcessor
+ckpt = "Your Local Checkpoints Path"
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+processor = AutoProcessor.from_pretrained(ckpt, trust_remote_code=True)
+model = AutoModelForCausalLM.from_pretrained(ckpt, trust_remote_code=True)
+model.to(device)
+model = model.to(torch.bfloat16)
+model.eval()
+```
+1️⃣ Text-to-image generation 
+```bash
+content = "Your instruction."
+images_batch = [None]
+```
+2️⃣ Image Understanding
+```bash
+content = "<im_start><image><im_end>\n Your instruction."
+img = Image.open("image_path")
+images_batch = [img,]
+```
+3️⃣ Text-only Question Answering
+```bash
+content = "Your instruction."
+images_batch = [None]
+```
+Then run the following code:
+```bash
+gen_config = {
+    "max_length": 300,
+    "cfg_scale": 9.5, # if generation
+    "temperature": 0.0,
+    "num_inference_steps": 80, # if use# if generation
+    "alpha": 0.5, # if generation
+    "edit_image": False # if generation
+    }
 
+inputs.update(gen_config)
+generated = model.generate(**inputs)
+input_ids = generated["input_ids"]
+
+images = generated["images"][0] # if generation
+current_img = images[0] # if generation
+current_img = current_img.clamp(0.0, 1.0) # if generation
+save_image(current_img, f"outputs/case_.png") # if generation
+print(processor.tokenizer.batch_decode(input_ids, skip_special_tokens=True)) # if understanding or text-only qa
+```
+Alternatively, you can directly run the code in [`Inference/`](./Inference) for a quick demo.
 
 ## 🧩 To-Do List
-
 - [ ] Release the **Inference Scripts** and **Checkpoints**
 - [ ] Release the **Evaluation Scripts**
 - [ ] Release the **Training Scripts** using the VeOmni framework
@@ -49,6 +98,6 @@ pip install flash-attn --no-build-isolation
 ---
 
 ## 📬 Contact
-For any questions or collaborations, feel free to contact me : )
+For any questions or collaborations, feel free to contact us : )
 
 📧 **[MetaPDa@gmail.com](MetaPDa@gmail.com)**
