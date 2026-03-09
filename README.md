@@ -96,6 +96,8 @@ Alternatively, you can directly run the code in [`Inference/`](./Inference) for 
 - [ ] Release **Cheers v1.1** — maintaining strong understanding performance while further improving generation quality
 
 ---
+This repo benefits from [VeOmni](https://github.com/ByteDance-Seed/VeOmni) and [VLMEvalKit
+](https://github.com/open-compass/VLMEvalKit). Thanks for their wonderful works.
 
 ## 📬 Contact
 For any questions or collaborations, feel free to contact us : )
