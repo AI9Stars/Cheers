@@ -44,6 +44,7 @@ pip install flash-attn --no-build-isolation
 - [ ] Release the **Evaluation Scripts**
 - [ ] Release the **Training Scripts** using the VeOmni framework
 - [ ] Release the **Training Data Recipe** 
+- [ ] Release **Cheers v1.1** — maintaining strong understanding performance while further improving generation quality
 
 ---
 
