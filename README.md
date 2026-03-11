@@ -89,10 +89,10 @@ print(processor.tokenizer.batch_decode(input_ids, skip_special_tokens=True)) # i
 Alternatively, you can directly run the code in [`Inference/`](./Inference) for a quick demo.
 
 ## 🧩 To-Do List
-- [ ] Release the **Inference Scripts** and **Checkpoints**
+- [x] Release the **Inference Scripts** and **Checkpoints**
+- [x] Release the **Training Scripts** using the VeOmni framework
 - [ ] Release the **Evaluation Scripts**
-- [ ] Release the **Training Scripts** using the VeOmni framework
-- [ ] Release the **Training Data Recipe** 
+- [ ] Release the **Training Data** 
 - [ ] Release **Cheers v1.1** — maintaining strong understanding performance while further improving generation quality
 
 ---

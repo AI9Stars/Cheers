@@ -1,0 +1,44 @@
+{
+    "architectures": [
+        "Cheers"
+    ],
+        "auto_map": {
+        "AutoConfig": "configuration_umm.UMMConfig",
+        "AutoModel": "modeling_umm.UMMModel",
+        "AutoModelForCausalLM": "modeling_umm.Cheers"
+    },
+    "vae_encoder_config": {
+        "resolution": 512
+    },
+    "vae_decoder_config": {
+        "resolution": 512
+    },
+    "vision_representation_config": {
+        "attention_dropout": 0.0,
+        "hidden_act": "gelu_pytorch_tanh",
+        "hidden_size": 1152,
+        "image_size": 512,
+        "intermediate_size": 4304,
+        "layer_norm_eps": 1e-06,
+        "model_type": "umm",
+        "num_attention_heads": 16,
+        "num_channels": 3,
+        "num_hidden_layers": 27,
+        "num_patches": 1024,
+        "patch_size": 16
+    },
+    "text_config":{
+        "hidden_size": 1536,
+        "intermediate_size": 8960,
+        "max_window_layers": 21,
+        "num_attention_heads": 12,
+        "num_key_value_heads": 2,
+        "sliding_window": 32768,
+        "tie_word_embeddings": true,
+        "vocab_size": 151936,
+        "max_position_embeddings": 32768
+    },
+    "model_type": "umm",
+    "torch_dtype": "bfloat16",
+    "transformers_version": "4.51.3"
+}

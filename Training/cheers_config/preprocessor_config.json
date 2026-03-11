@@ -1,0 +1,10 @@
+{
+    "image_processor_type": "UMMImageProcessor",
+    "auto_map":{
+        "AutoProcessor": "processing_umm.UMMProcessor",
+        "AutoImageProcessor": "image_processing_umm.UMMImageProcessor"
+    },
+    "processor_class": "UMMProcessor",
+    "scale_resolution": 512,
+    "patch_size": 16
+}
