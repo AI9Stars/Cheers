@@ -1,8 +1,11 @@
 <div align="center">
 
 # ***Cheers <img src="fig/logo.png" width="25"> : Decoupling Patch Details from Semantic Representations Enables Unified Multimodal Comprehension and Generation*** 
+<p align="center">
+        🤗 <a href="https://huggingface.co/ai9stars/Cheers">Hugging Face</a>&nbsp&nbsp | &nbsp&nbsp📑 <a href="1">Paper</a>&nbsp&nbsp
+</p>
 
-Yichen Zhang<sup>1</sup>, [Da Peng](https://pengda02.github.io/)<sup>2</sup>, [Zonghao Guo](https://guozonghao96.github.io/)<sup>1</sup>, Zijian Zhang<sup>3</sup>, Xuesong Yang<sup>3</sup>,
+Yichen Zhang<sup>1*</sup>, [Da Peng](https://pengda02.github.io/)<sup>2*</sup>, [Zonghao Guo](https://guozonghao96.github.io/)<sup>1†</sup>, Zijian Zhang<sup>3</sup>, Xuesong Yang<sup>3</sup>,
 
 Tong Sun<sup>3</sup>, Shichu Sun<sup>3</sup>, Yidan Zhang<sup>3</sup>, Yanghao Li<sup></sup>, Haiyan Zhao<sup></sup>, Wang Xu<sup></sup>,
 
@@ -13,6 +16,9 @@ Qiang Ma<sup>1</sup>, [Wei Ke](https://scholar.google.com/citations?hl=en&user=B
 <sup>1</sup>Tsinghua University, 
 <sup>2</sup>Xi'an Jiaotong University, 
 <sup>3</sup>University of Chinese Academy of Sciences
+
+\* Equal contribution
+† Corresponding author
 
 </div>
 <img src="fig/case.png" width="100%">
