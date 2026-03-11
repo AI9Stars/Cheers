@@ -1,0 +1,2 @@
+{"id": "01_understanding", "image": "image_path_1", "conversations": [{"from": "human", "value": "<im_start><image><im_end>\nWhat is this?"}, {"from": "gpt", "value": "Description"}]}
+{"id": "02_generation", "image": "image_path_2", "conversations": [{"from": "human", "value": "An apple.\nBased on the above description, generate an image."}, {"from": "gpt", "value": "<im_start><image_gen><im_end>"}]}

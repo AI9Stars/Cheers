@@ -88,6 +88,18 @@ print(processor.tokenizer.batch_decode(input_ids, skip_special_tokens=True)) # i
 ```
 Alternatively, you can directly run the code in [`Inference/`](./Inference) for a quick demo.
 
+## Training
+Please follow the [VeOmni](https://github.com/ByteDance-Seed/VeOmni) framework guidelines to set up the training environment. The training workspace is located in the [`Training/`](./Training) directory. Then you can run the following scripts:
+```bash
+bash train_align.sh # for alignment
+```
+or
+```bash
+bash train_sft.sh # for training all parameters except the VAE.
+```
+Notably, the training data format can follow the template at [`Training/data/format.jsonl`](Training/data/format.jsonl). Please also remember to update the training configuration in [`Training/configs/multimodal/cheers/und_gen_train/`](Training/configs/multimodal/cheers/und_gen_train/).
+
+
 ## 🧩 To-Do List
 - [x] Release the **Inference Scripts** and **Checkpoints**
 - [x] Release the **Training Scripts** using the VeOmni framework
