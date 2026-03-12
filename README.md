@@ -37,9 +37,6 @@ A recent cutting-edge topic in multimodal modeling is to unify visual comprehens
 conda create -n cheers python=3.10 -y
 conda activate cheers
 pip install -r requirements.txt
-
-# optional
-pip install flash-attn --no-build-isolation
 ```
 
 ## Inference
@@ -105,6 +102,21 @@ bash train_sft.sh # for training all parameters except the VAE.
 ```
 Notably, the training data format can follow the template at [`Training/data/format.jsonl`](Training/data/format.jsonl). Please also remember to update the training configuration in [`Training/configs/multimodal/cheers/und_gen_train/`](Training/configs/multimodal/cheers/und_gen_train/).
 
+## ***Evaluation***
+Please follow the [VLMEvalKit](https://github.com/open-compass/VLMEvalKit) framework guidelines to set up the evaluation environment. The evaluation workspace is located in the [`Evaluation/`](./Evaluation) directory. Then you can run the following scripts:
+
+```bash
+torchrun --master_port=19507 --nproc-per-node=8  run.py --data \
+    MathVista_MINI MMBench_DEV_EN_V11 SEEDBench_IMG \
+    MMStar POPE RealWorldQA MMMU_DEV_VAL ScienceQA_TEST  \
+    AI2D_TEST OCRBench TextVQA_VAL ChartQA_TEST \
+    --model Cheers --verbose 
+```
+Similarly, you can directly run the following script to perform the evaluation:
+```bash
+bash eval.sh
+```
+Please make sure to update the dataset path in [`eval.sh`](./Evaluation/eval.sh) and the model path in [`vlmeval/config.py`](./Evaluation/vlmeval/config.py) before running the script.
 
 ## 🧩 To-Do List
 - [x] Release the **Inference Scripts** and **Checkpoints**
@@ -120,4 +132,6 @@ This repo benefits from [VeOmni](https://github.com/ByteDance-Seed/VeOmni) and [
 ## 📬 Contact
 For any questions or collaborations, feel free to contact us : )
 
-📧 **[MetaPDa@gmail.com](MetaPDa@gmail.com)**
+<p align="left">
+📧 <a href="MetaPDa@gmail.com">MetaPDa@gmail.com</a>&nbsp&nbsp | &nbsp&nbsp 📧 <a href="guozonghao96@outlook.com">guozonghao96@outlook.com</a>&nbsp&nbsp | &nbsp&nbsp 📧 <a href="yichen0zhang@gmail.com">yichen0zhang@gmail.com</a>&nbsp&nbsp
+</p>
