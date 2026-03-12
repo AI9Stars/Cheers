@@ -31,7 +31,9 @@ A recent cutting-edge topic in multimodal modeling is to unify visual comprehens
 ## 🔥 News
 
 -[2026/03/13] 📢 The ***Cheers*** paper is officially released.
+
 -[2026/03/13] 🛠 We open-source the training pipeline and evaluation code.
+
 -[2026/03/13] 📦 The model checkpoints of ***Cheers*** are now available.
 
 ## 🚀 Quick Start
