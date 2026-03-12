@@ -7,9 +7,9 @@
 
 Yichen Zhang<sup>1*</sup>, [Da Peng](https://pengda02.github.io/)<sup>2*</sup>, [Zonghao Guo](https://guozonghao96.github.io/)<sup>1†</sup>, Zijian Zhang<sup>3</sup>, Xuesong Yang<sup>3</sup>,
 
-Tong Sun<sup>3</sup>, Shichu Sun<sup>3</sup>, Yidan Zhang<sup>3</sup>, Yanghao Li<sup></sup>, Haiyan Zhao<sup></sup>, Wang Xu<sup></sup>,
+Tong Sun<sup>3</sup>, Shichu Sun<sup>3</sup>, Yidan Zhang<sup>3</sup>, Yanghao Li<sup>1</sup>, Haiyan Zhao<sup>1</sup>, Wang Xu<sup>1</sup>,
 
-Qi Shi<sup>1</sup>, Yangang Sun<sup>1</sup>, Chi Chen<sup>1</sup>, Shuo Wang<sup>1</sup>, Yukun Yan<sup></sup>, Xu Han<sup>1</sup>,
+Qi Shi<sup>1</sup>, Yangang Sun<sup>1</sup>, Chi Chen<sup>1</sup>, Shuo Wang<sup>1</sup>, Yukun Yan<sup>1</sup>, Xu Han<sup>1</sup>,
 
 Qiang Ma<sup>1</sup>, [Wei Ke](https://scholar.google.com/citations?hl=en&user=BENt-uEAAAAJ)<sup>2</sup>, Liang Wang<sup>3</sup>, Zhiyuan Liu<sup>1</sup>, Maosong Sun<sup>1</sup>
 
