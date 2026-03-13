@@ -27,14 +27,16 @@ Qiang Ma<sup>1</sup>, [Wei Ke](https://scholar.google.com/citations?hl=en&user=B
 ## 🌟 What is ***Cheers***?
 A recent cutting-edge topic in multimodal modeling is to unify visual comprehension and generation within a single model. However, the two tasks demand mismatched decoding regimes and visual representations, making it non-trivial to jointly optimize within a shared feature space. In this work, we present ***Cheers***, a unified multimodal model that decouples patch-level details from semantic representations, thereby stabilizing semantics for multimodal understanding and improving fidelity for image generation via gated detail residuals. ***Cheers*** includes three key components: (i) a unified vision tokenizer that encodes and compresses image latent states into semantic tokens for efficient LLM conditioning, (ii) an LLM-based Transformer that unifies autoregressive decoding for text generation and diffusion decoding for image generation, and (iii) a cascaded flow matching head that decodes visual semantics first and then injects semantically gated detail residuals from the vision tokenizer to refine high-frequency content. Experiments on popular benchmarks demonstrate that ***Cheers*** matches or surpasses advanced UMMs in both visual understanding and generation. Notably, ***Cheers*** outperforms the Tar-1.5B on the popular benchmarks GenEval and MMBench, while requiring only 20% of the training cost, indicating effective and efficient (i.e., 4x token compression) unified multimodal modeling.
 
+## Model Architecture
+<img src="fig/model.png" width="100%">
 
 ## 🔥 News
 
--[2026/03/13] 📢 The ***Cheers*** paper is officially released.
+-[2026/03/16] 📢 The ***Cheers*** paper is officially released.
 
--[2026/03/13] 🛠 We open-source the training pipeline and evaluation code.
+-[2026/03/16] 🛠 We open-source the training pipeline and evaluation code.
 
--[2026/03/13] 📦 The model checkpoints of ***Cheers*** are now available.
+-[2026/03/16] 📦 The model checkpoints of ***Cheers*** are now available.
 
 ## 🚀 Quick Start
 ### Set up a new virtual environment
