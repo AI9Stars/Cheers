@@ -164,5 +164,5 @@ This repo benefits from [VeOmni](https://github.com/ByteDance-Seed/VeOmni), [VLM
 For any questions or collaborations, feel free to contact us : )
 
 <p align="left">
-📧 <a href="MetaPDa@gmail.com">MetaPDa@gmail.com</a>&nbsp&nbsp | &nbsp&nbsp 📧 <a href="guozonghao96@outlook.com">guozonghao96@outlook.com</a>&nbsp&nbsp | &nbsp&nbsp 📧 <a href="yichen0zhang@gmail.com">yichen0zhang@gmail.com</a>&nbsp&nbsp
+📧 <a href="guozonghao96@outlook.com">guozonghao96@outlook.com</a>&nbsp&nbsp | &nbsp&nbsp 📧 <a href="yichen0zhang@gmail.com">yichen0zhang@gmail.com</a>&nbsp&nbsp 📧 <a href="MetaPDa@gmail.com">MetaPDa@gmail.com</a>&nbsp&nbsp | &nbsp&nbsp
 </p>
