@@ -24,10 +24,10 @@ Qiang Ma<sup>1</sup>, [Wei Ke](https://scholar.google.com/citations?hl=en&user=B
 <img src="fig/case.png" width="100%">
 
 
-## 🌟 What is ***Cheers***?
+## 🌟 **What is** ***Cheers***?
 A recent cutting-edge topic in multimodal modeling is to unify visual comprehension and generation within a single model. However, the two tasks demand mismatched decoding regimes and visual representations, making it non-trivial to jointly optimize within a shared feature space. In this work, we present ***Cheers***, a unified multimodal model that decouples patch-level details from semantic representations, thereby stabilizing semantics for multimodal understanding and improving fidelity for image generation via gated detail residuals. ***Cheers*** includes three key components: (i) a unified vision tokenizer that encodes and compresses image latent states into semantic tokens for efficient LLM conditioning, (ii) an LLM-based Transformer that unifies autoregressive decoding for text generation and diffusion decoding for image generation, and (iii) a cascaded flow matching head that decodes visual semantics first and then injects semantically gated detail residuals from the vision tokenizer to refine high-frequency content. Experiments on popular benchmarks demonstrate that ***Cheers*** matches or surpasses advanced UMMs in both visual understanding and generation. Notably, ***Cheers*** outperforms the Tar-1.5B on the popular benchmarks GenEval and MMBench, while requiring only 20% of the training cost, indicating effective and efficient (i.e., 4x token compression) unified multimodal modeling.
 
-## Model Architecture
+## 🧱 **Model Architecture**
 <img src="fig/model.png" width="100%">
 
 ## 🔥 News
@@ -38,7 +38,7 @@ A recent cutting-edge topic in multimodal modeling is to unify visual comprehens
 
 -[2026/03/16] 📦 The model checkpoints of ***Cheers*** are now available.
 
-## 🚀 Quick Start
+## 🚀 **Quick Start**
 ### Set up a new virtual environment
 ```bash
 conda create -n cheers python=3.10 -y
@@ -98,7 +98,7 @@ print(processor.tokenizer.batch_decode(input_ids, skip_special_tokens=True)) # i
 ```
 Alternatively, you can directly run the code in [`Inference/`](./Inference) for a quick demo.
 
-## Training
+## 🔧 **Training**
 Please follow the [VeOmni](https://github.com/ByteDance-Seed/VeOmni) framework [guidelines](https://veomni.readthedocs.io/en/latest/get_started/installation/install.html) to set up the training environment. The training workspace is located in the [`Training/`](./Training) directory. Then you can run the following scripts:
 ```bash
 bash train_align.sh # for alignment
@@ -109,7 +109,7 @@ bash train_sft.sh # for training all parameters except the VAE.
 ```
 Notably, the training data format can follow the template at [`Training/data/format.jsonl`](Training/data/format.jsonl). Please also remember to update the training configuration in [`Training/configs/multimodal/cheers/und_gen_train/`](Training/configs/multimodal/cheers/und_gen_train/).
 
-## ***Evaluation***
+## 📊 **Evaluation**
 
 ### **Understanding**
 Please follow the [VLMEvalKit](https://github.com/open-compass/VLMEvalKit) framework guidelines to set up the evaluation environment. The evaluation workspace is located in the [`Evaluation_Understanding/`](./Evaluation_Understanding) directory. Then you can run the following scripts:
