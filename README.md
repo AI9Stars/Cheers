@@ -99,7 +99,7 @@ print(processor.tokenizer.batch_decode(input_ids, skip_special_tokens=True)) # i
 Alternatively, you can directly run the code in [`Inference/`](./Inference) for a quick demo.
 
 ## Training
-Please follow the [VeOmni](https://github.com/ByteDance-Seed/VeOmni) framework guidelines to set up the training environment. The training workspace is located in the [`Training/`](./Training) directory. Then you can run the following scripts:
+Please follow the [VeOmni](https://github.com/ByteDance-Seed/VeOmni) framework [guidelines](https://veomni.readthedocs.io/en/latest/get_started/installation/install.html) to set up the training environment. The training workspace is located in the [`Training/`](./Training) directory. Then you can run the following scripts:
 ```bash
 bash train_align.sh # for alignment
 ```
@@ -156,7 +156,7 @@ bash Evaluation_DPGBench/scripts/dpg_eval.sh # Remember to replace the image fol
 - [ ] Release the **Training Data** 
 - [ ] Release **Cheers v1.1** — maintaining strong understanding performance while further improving generation quality
 
----
+## 🙏 Acknowledgement
 This repo benefits from [VeOmni](https://github.com/ByteDance-Seed/VeOmni), [VLMEvalKit
 ](https://github.com/open-compass/VLMEvalKit), [GenEval](https://github.com/djghosh13/geneval) and [ELLA](https://github.com/TencentQQGYLab/ELLA). Thanks for their wonderful works.
 
@@ -166,3 +166,10 @@ For any questions or collaborations, feel free to contact us : )
 <p align="left">
 📧 <a href="guozonghao96@outlook.com">guozonghao96@outlook.com</a>  &nbsp&nbsp | &nbsp&nbsp 📧 <a href="yichen0zhang@gmail.com">yichen0zhang@gmail.com</a> &nbsp&nbsp | &nbsp&nbsp 📧 <a href="MetaPDa@gmail.com">MetaPDa@gmail.com</a> &nbsp&nbsp 
 </p>
+
+## 📖 Citation
+If you find our ***Cheers*** useful, please cite our ***Cheers*** technical report using this BibTeX.
+
+```bibtex
+
+```
