@@ -171,5 +171,10 @@ For any questions or collaborations, feel free to contact us : )
 If you find our ***Cheers*** useful, please cite our ***Cheers*** technical report using this BibTeX.
 
 ```bibtex
-
+@article{zhang2026cheers,
+  title={Cheers: Decoupling Patch Details from Semantic Representations Enables Unified Multimodal Comprehension and Generation},
+  author={Yichen Zhang, Da Peng, Zonghao Guo, Zijian Zhang, Xuesong Yang, Tong Sun, Shichu Sun, Yidan Zhang, Yanghao Li, Haiyan Zhao, Wang Xu, Qi Shi, Yangang Sun, Chi Chen, Shuo Wang, Yukun Yan, Xu Han, Qiang Ma, Wei Ke, Liang Wang, Zhiyuan Liu, Maosong Sun},
+  journal={arXiv preprint arXiv:2603.12793},
+  year={2026}
+}
 ```
