@@ -2,7 +2,7 @@
 
 # ***Cheers <img src="fig/logo.png" width="25"> : Decoupling Patch Details from Semantic Representations Enables Unified Multimodal Comprehension and Generation*** 
 <p align="center">
-        🤗 <a href="https://huggingface.co/ai9stars/Cheers">Hugging Face</a>&nbsp&nbsp | &nbsp&nbsp📑 <a href="1">Paper</a>&nbsp&nbsp
+        🤗 <a href="https://huggingface.co/ai9stars/Cheers">Hugging Face</a>&nbsp&nbsp | &nbsp&nbsp📑 <a href="https://arxiv.org/abs/2603.12793">Paper</a>&nbsp&nbsp
 </p>
 
 Yichen Zhang<sup>1*</sup>, [Da Peng](https://pengda02.github.io/)<sup>2*</sup>, [Zonghao Guo](https://scholar.google.com/citations?user=h1I6LJcAAAAJ&hl=zh-CN)<sup>1†</sup>, Zijian Zhang<sup>3</sup>, Xuesong Yang<sup>3</sup>,
