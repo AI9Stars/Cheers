@@ -168,7 +168,7 @@ For any questions or collaborations, feel free to contact us : )
 </p>
 
 ## 📖 Citation
-If you find our ***Cheers*** useful, please cite our ***Cheers*** technical report using this BibTeX.
+If you find ***Cheers*** useful, please cite ***Cheers*** technical report using this BibTeX.
 
 ```bibtex
 @article{zhang2026cheers,
