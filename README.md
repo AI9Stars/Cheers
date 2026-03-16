@@ -34,7 +34,7 @@ A recent cutting-edge topic in multimodal modeling is to unify visual comprehens
 
 -[2026/03/16] 📢 The ***Cheers*** paper is officially released.
 
--[2026/03/16] 🛠 We open-source the training pipeline and evaluation code.
+-[2026/03/16] 🛠 We open-source the evaluation code and training pipeline. **Our codebase is highly efficient: training on 3.8M samples takes only about two days on a single machine with 8×A100 GPUs.**
 
 -[2026/03/16] 📦 The model checkpoints of ***Cheers*** are now available.
 
