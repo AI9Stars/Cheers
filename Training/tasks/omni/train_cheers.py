@@ -336,7 +336,7 @@ class MyModelArguments(ModelArguments):
 class MyDataArguments(DataArguments):
     image_folder: str = field(
         default=None,
-        metadata={"help": "Used for llava uhd dataloader"},
+        metadata={"help": "Used for dataloader"},
     )
 
 @dataclass
