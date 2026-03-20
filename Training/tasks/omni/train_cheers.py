@@ -211,7 +211,7 @@ def process_sample(
     Processes multimodal example with qwen2vl's pre-processor.
     """
     conversations = sample["conversations"]  # text-only data
-    conversations = conv_preprocess('llava_uhd', conversations, **kwargs)
+    conversations = conv_preprocess('custom_data', conversations, **kwargs)
     tokenized_example = chat_template.encode_messages(conversations)
     input_ids = tokenized_example["input_ids"]
     new_input_ids = None

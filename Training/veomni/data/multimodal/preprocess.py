@@ -314,6 +314,18 @@ def voice_assistant_preprocess(conversations, **kwargs):
     ]
     return constructed_conversation
 
+def custom_data(conversations, **kwargs):
+    role_mapping = {"human": "user", "gpt": "assistant"}
+    constructed_conversation = []
+    if conversations[0]["from"] != "human":  # Skip the first one if it is not from human
+        conversations = conversations[1:]
+    assert conversations[0]["from"] == "human"
+
+    for message in conversations:
+        value = message["value"]
+        role = role_mapping[message["from"]]
+        constructed_conversation.append({"role":role, "content": value})
+    return constructed_conversation
 
 DATASETS = {
     "sharegpt4v_pretrain": sharegpt4v_pretrain_preprocess,
@@ -343,6 +355,7 @@ DATASETS = {
     "dalle3_1m": dalle3_1m_preprocess,
     "LLaVA-Video-178K": llava_video_preprocess,
     "VoiceAssistant": voice_assistant_preprocess,
+    "custom_data": custom_data,
 }
 
 
