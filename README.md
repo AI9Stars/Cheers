@@ -31,7 +31,7 @@ A recent cutting-edge topic in multimodal modeling is to unify visual comprehens
 <img src="fig/model.png" width="100%">
 
 ## 🔥 News
-
+- **[2026/03/25]** 🔥 Our training framework supports **image editing** training. Please refer to [`format.jsonl`](./Training/data/format.jsonl) for data organization.
 - **[2026/03/19]** 🎉 [**Demo**](https://huggingface.co/spaces/prithivMLmods/Cheers-HF-Demo) is now available on Hugging Face. Thanks to [Prithiv Sakthi](https://github.com/prithivsakthiur) for setting it up!
 - **[2026/03/16]** 📢 The ***Cheers*** paper is officially released.
 - **[2026/03/16]** 🛠 We open-source the evaluation code and training pipeline. **Our codebase is highly efficient: training on 3.8M samples takes only about two days on a single machine with 8×A100 GPUs.**
