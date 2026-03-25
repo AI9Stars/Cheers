@@ -40,7 +40,7 @@ A recent cutting-edge topic in multimodal modeling is to unify visual comprehens
 ## 🚀 **Quick Start**
 ### Set up a new virtual environment
 ```bash
-conda create -n cheers python=3.10 -y
+conda create -n cheers python=3.11 -y
 conda activate cheers
 pip install -r requirements.txt
 ```
@@ -76,6 +76,11 @@ images_batch = [None]
 ```
 Then run the following code:
 ```bash
+messages_batch = [[{"role": "user", "content": content} ],]
+texts = [processor.apply_chat_template(msg, tokenize=False, add_generation_prompt=True) for msg in messages_batch]
+inputs = processor(text=texts, images=images_batch, return_tensors="pt", add_im_start_id=False)
+inputs = {k: (v.to(device=device) if isinstance(v, torch.Tensor) else v) for k, v in inputs.items()}
+
 gen_config = {
     "max_length": 300,
     "cfg_scale": 9.5, # if generation
@@ -98,7 +103,8 @@ print(processor.tokenizer.batch_decode(input_ids, skip_special_tokens=True)) # i
 Alternatively, you can directly run the code in [`Inference/`](./Inference) for a quick demo.
 
 ## 🔧 **Training**
-Please follow the [VeOmni](https://github.com/ByteDance-Seed/VeOmni) framework [guidelines](https://veomni.readthedocs.io/en/latest/get_started/installation/install.html) to set up the training environment. The training workspace is located in the [`Training/`](./Training) directory. Then you can run the following scripts:
+Please follow the [VeOmni](https://github.com/ByteDance-Seed/VeOmni) framework [guidelines](https://veomni.readthedocs.io/en/latest/get_started/installation/install.html) to set up the training environment. The training workspace is located in the [`Training/`](./Training) directory. Of course, you can also directly enter the [`Training/`](./Training) directory and run `pip install -e .` to quickly set up the training environment. Then you can run the following scripts:
+
 ```bash
 bash train_align.sh # for alignment
 ```
