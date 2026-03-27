@@ -114,7 +114,7 @@ bash train_sft.sh # for training all parameters except the VAE.
 Notably, the training data format can follow the template at [`Training/data/format.jsonl`](Training/data/format.jsonl). Please also remember to update the training configuration in [`Training/configs/multimodal/cheers/und_gen_train/`](Training/configs/multimodal/cheers/und_gen_train/).
 
 
-After training, please replace the config.json file in the output directory with [`Training/cheers_config/config.json`](Training/cheers_config/config.json) to ensure correct evaluation.
+💡 After training, please replace the **config.json** file in the output directory with **[`Training/cheers_config/config.json`](Training/cheers_config/config.json)** to ensure correct evaluation. And also add **[`Training/cheers_config/modeling_umm.py`](Training/cheers_config/modeling_umm.py)** into output directory. 
 ## 📊 **Evaluation**
 
 ### **Understanding**
