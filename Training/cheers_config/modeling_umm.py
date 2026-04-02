@@ -2664,27 +2664,40 @@ class Cheers(UMMPretrainedModel, GenerationMixin):
         x = mean_x
         return x
     
+    # def _build_uncond_full_ids(self, seq_ids):
+    #     bsz, seqlen = seq_ids.shape
+    #     new_ids = seq_ids.clone()
+    #     for b in range(bsz):
+    #         seq = seq_ids[b]
+    #         in_img_block = False
+    #         for t in range(seqlen):
+    #             tok = seq[t].item()
+    #             if tok == IM_START_ID:
+    #                 in_img_block = True
+    #                 new_ids[b, t] = IM_START_ID
+    #             elif tok == IM_END_ID and in_img_block:
+    #                 new_ids[b, t] = IM_END_ID
+    #                 in_img_block = False
+    #             elif tok == IMAGE_TOKEN_INDEX:
+    #                 new_ids[b, t] = IMAGE_TOKEN_INDEX   
+    #             else:
+    #                 if in_img_block:
+    #                     new_ids[b, t] = seq[t]
+    #                 else:
+    #                     new_ids[b, t] = NO_MEAN_ID
+    #     return new_ids
+
     def _build_uncond_full_ids(self, seq_ids):
         bsz, seqlen = seq_ids.shape
         new_ids = seq_ids.clone()
         for b in range(bsz):
             seq = seq_ids[b]
-            in_img_block = False
             for t in range(seqlen):
                 tok = seq[t].item()
-                if tok == IM_START_ID:
-                    in_img_block = True
-                    new_ids[b, t] = IM_START_ID
-                elif tok == IM_END_ID and in_img_block:
-                    new_ids[b, t] = IM_END_ID
-                    in_img_block = False
-                elif tok == IMAGE_TOKEN_INDEX:
-                    new_ids[b, t] = IMAGE_TOKEN_INDEX   
+                if tok in [IM_START_ID, IM_END_ID, IMAGE_TOKEN_INDEX]:
+                    new_ids[b, t] = seq[t]
                 else:
-                    if in_img_block:
-                        new_ids[b, t] = seq[t]
-                    else:
-                        new_ids[b, t] = NO_MEAN_ID
+                    new_ids[b, t] = NO_MEAN_ID
         return new_ids
 
     def _sample_from_logits(
