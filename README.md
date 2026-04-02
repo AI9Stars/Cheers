@@ -24,6 +24,7 @@ Qiang Ma<sup>1</sup>, [Wei Ke](https://scholar.google.com/citations?hl=en&user=B
 <img src="fig/case.png" width="100%">
 
 ## 🔥 News
+- **[2026/04/02]** 🚀 [**vLLM**](https://github.com/vllm-project/vllm) now supports ***Cheers***. Thanks to [Bingshuai Liu](https://github.com/bingshuailiu) for the integration!
 - **[2026/03/25]** 🔥 Our training framework supports **image editing** training. Please refer to [`format.jsonl`](./Training/data/format.jsonl) for data organization.
 - **[2026/03/19]** 🎉 [**Demo**](https://huggingface.co/spaces/prithivMLmods/Cheers-HF-Demo) is now available on Hugging Face. Thanks to [Prithiv Sakthi](https://github.com/prithivsakthiur) for setting it up!
 - **[2026/03/16]** 📢 The ***Cheers*** paper is officially released.
