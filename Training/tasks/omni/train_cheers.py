@@ -223,7 +223,7 @@ def process_sample(
         no_mean_token_id = processor.no_mean_token_id
         # allowed_ids = [image_gen_token_id, image_gen_start_token_id, image_gen_end_token_id]
         allowed_ids = [image_gen_token_id, image_gen_start_token_id, image_gen_end_token_id, image_token]
-        if random.random() < cfg_data_rate and image_gen_token_id in input_ids and image_token not in input_ids:
+        if random.random() < cfg_data_rate and image_gen_token_id in input_ids:
             new_input_ids = [
                 token if token in allowed_ids else no_mean_token_id
                 for token in input_ids
