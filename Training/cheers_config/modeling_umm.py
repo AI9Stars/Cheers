@@ -1867,10 +1867,7 @@ class UMMModel(UMMPretrainedModel):
 
         x0 = torch.randn_like(image_latent)
         if t is not None:
-            try:
-                xt, ut = self.path_sample(t, x0, image_latent)
-            except:
-                xt, ut = image_latent, torch.zeros_like(image_latent, device=image_latent.device, dtype=image_latent.dtype)
+            xt, ut = self.path_sample(t, x0, image_latent)
         else:
             xt, ut = image_latent, torch.zeros_like(image_latent, device=image_latent.device, dtype=image_latent.dtype)
 
@@ -2083,19 +2080,21 @@ class UMMModel(UMMPretrainedModel):
         **kwargs,
         ):
 
+        if t is not None:
+            if isinstance(t, torch.Tensor):
+                t = t.reshape(-1).unsqueeze(1).to(dtype=pixel_values.dtype, device=pixel_values.device)
+            elif isinstance(t, list):
+                t = torch.cat(t).unsqueeze(1).to(dtype=pixel_values.dtype, device=pixel_values.device)
+        else:
+            t = torch.ones((len(pixel_values), 1), dtype=pixel_values.dtype, device=pixel_values.device)
+            
         if inputs_embeds is None or pixel_values is not None:
             input_ids, position_ids, attention_mask, past_key_values, inputs_embeds, labels, image_gen_labels, image_gen_pixcel_labels, image_gen_pixcel_hat, new_image_mask = self.prepare_inputs_labels_for_multimodal(
                 input_ids, t, position_ids, attention_mask, past_key_values, labels, pixel_values, grid_hws
             )
         device = inputs_embeds.device
-        if t is not None and len(t) == len(pixel_values):
-            t_embeds_1, t_embeds_2 = self.time_embed(t, inputs_embeds.dtype)
-        elif isinstance(t, list):
-            t = torch.cat(t).unsqueeze(1).to(dtype=inputs_embeds.dtype, device=inputs_embeds.device)
-            t_embeds_1, t_embeds_2 = self.time_embed(t, inputs_embeds.dtype)
-        else:
-            t = torch.ones((len(pixel_values), 1), dtype=inputs_embeds.dtype, device=inputs_embeds.device)
-            t_embeds_1, t_embeds_2 = self.time_embed(t, inputs_embeds.dtype)
+
+        t_embeds_1, t_embeds_2 = self.time_embed(t, inputs_embeds.dtype)
 
         batch_size, seq_len = new_image_mask.shape
         head_num = self.config.text_config.num_attention_heads
