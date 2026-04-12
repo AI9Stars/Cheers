@@ -24,6 +24,7 @@ Qiang Ma<sup>1</sup>, [Wei Ke](https://scholar.google.com/citations?hl=en&user=B
 <img src="fig/case.png" width="100%">
 
 ## 🔥 News
+- **[2026/04/12]** 🧾 The SFT dataset is now available at [**Hugging Face**](https://huggingface.co/datasets/ai9stars/Cheers-Training-Data)!
 - **[2026/04/02]** 🚀 [**vLLM**](https://github.com/vllm-project/vllm) now supports ***Cheers***. Thanks to [Bingshuai Liu](https://github.com/bingshuailiu) for the integration!
 - **[2026/03/25]** 🔥 Our training framework supports **image editing** training. Please refer to [`format.jsonl`](./Training/data/format.jsonl) for data organization.
 - **[2026/03/19]** 🎉 [**Demo**](https://huggingface.co/spaces/prithivMLmods/Cheers-HF-Demo) is now available on Hugging Face. Thanks to [Prithiv Sakthi](https://github.com/prithivsakthiur) for setting it up!
@@ -160,7 +161,7 @@ bash Evaluation_DPGBench/scripts/dpg_eval.sh # Remember to replace the image fol
 - [x] Release the **Inference Scripts** and **Checkpoints**
 - [x] Release the **Training Scripts** using the VeOmni framework
 - [x] Release the **Evaluation Scripts**
-- [ ] Release the **Training Data** 
+- [x] Release the **Training Data** 
 - [ ] Release **Cheers v1.1** — maintaining strong understanding performance while further improving generation quality
 
 ## 🙏 Acknowledgement
