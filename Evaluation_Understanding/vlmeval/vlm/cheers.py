@@ -203,9 +203,9 @@ class Cheers(BaseModel):
         for item in msgs:
             if item['type'] == 'text':
                 text += item['value']
-                images.append(None)
+                # images.append(None)
             elif item['type'] == 'image':
-                text += "<image>\n"
+                text += "<im_start><image><im_end>\n"
                 image = Image.open(item['value']).convert('RGB')
                 images.append(image)
 
