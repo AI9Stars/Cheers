@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0 torchrun --nproc-per-node=1 --master-port 35499 ./Evaluation_DPGBench/run.py --data dpg --model cheers --mode all --alpha 0.5 --cfg 9.5 --steps 250 --model_path ./Cheers-CKPT/v1

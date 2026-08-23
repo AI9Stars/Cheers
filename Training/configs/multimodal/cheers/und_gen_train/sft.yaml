@@ -1,0 +1,52 @@
+model:
+  config_path: model_config
+  tokenizer_path: model_config
+  model_weights_path: /path/to/local/ck
+  attn_implementation: sdpa
+  torch_dtype: bfloat16
+
+data:
+  data_type: conversation
+  dataloader_type: native
+  datasets_type: iterable
+  chat_template: rae_qwen
+  text_keys: conversations
+  max_seq_len: 2048
+  train_path: /path/to/training/jsonl
+  image_folder: /path/to/training/image_folder
+  drop_last: true
+
+train:
+  lr: 1e-4
+  weight_decay: 0.
+  optimizer: adamw
+
+  max_steps: 60000
+  micro_batch_size: 4
+  global_batch_size: 512
+  num_train_epochs: 1
+
+  lr_decay_style: constant
+  lr_decay_ratio: 1.0
+  lr_warmup_ratio: 0.02
+  lr_start: 0.
+  cfg_data_rate: 0.2
+  trainable_modules: ["und_projector", "gen_projector", "vae_decoder_projector", "hi_gate", "hi_projector", "lm_head", "embed_tokens", "vision_representation", "language_model", "time_embed"]
+
+  use_wandb: true
+  wandb_project: sft
+  wandb_name: sft
+
+  num_workers: 64
+  pin_memory: true
+  prefetch_factor: 1
+  rmpad: false
+  rmpad_with_pos_ids: false
+  
+  empty_cache_steps: 500
+
+  ckpt_manager: dcp
+  data_parallel_mode: fsdp1
+
+  output_dir: ./output_dir/sft
+  save_steps: 1000
